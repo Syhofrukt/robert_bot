@@ -7,7 +7,7 @@ intents = discord.Intents.all()
 bot = commands.Bot(command_prefix='!', intents=intents)
 
 
-extensions = ['stats.main', 'games.tic_tac_toe.game_find']
+extensions = ['stats.main', 'visuals.main', 'events.main']
 
 
 async def main():
@@ -25,9 +25,5 @@ async def main():
 async def on_ready():
     print('We have logged in as {0.user}'.format(bot))
 
-
-@bot.event
-async def on_message(message):
-    pass
 
 asyncio.run(main())
